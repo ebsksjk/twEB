@@ -1,0 +1,27 @@
+1706009030750	geckodriver	INFO	Listening on 127.0.0.1:38027
+1706009031492	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr/bin/firefox" "--marionette" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofiletVHMcy"
+*** You are running in headless mode.
+Gtk-Message: 12:23:51.626: Failed to load module "xapp-gtk3-module"
+Gtk-Message: 12:23:51.627: Failed to load module "appmenu-gtk-module"
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+1706009114578	geckodriver	INFO	Listening on 127.0.0.1:48557
+1706009114736	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr/bin/firefox" "--marionette" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileHrLLQE"
+*** You are running in headless mode.
+Gtk-Message: 12:25:14.868: Failed to load module "xapp-gtk3-module"
+Gtk-Message: 12:25:14.868: Failed to load module "appmenu-gtk-module"
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+1706009177298	geckodriver	INFO	Listening on 127.0.0.1:53307
+1706009177460	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr/bin/firefox" "--marionette" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofile7jcdO1"
+*** You are running in headless mode.
+Gtk-Message: 12:26:17.591: Failed to load module "xapp-gtk3-module"
+Gtk-Message: 12:26:17.592: Failed to load module "appmenu-gtk-module"
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+1706009201967	geckodriver	INFO	Listening on 127.0.0.1:35855
+1706009202119	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr/bin/firefox" "--marionette" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileIYwQat"
+*** You are running in headless mode.
+Gtk-Message: 12:26:42.252: Failed to load module "xapp-gtk3-module"
+Gtk-Message: 12:26:42.253: Failed to load module "appmenu-gtk-module"
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+1706009332684	geckodriver	INFO	Listening on 127.0.0.1:45517
+1706009371693	geckodriver	INFO	Listening on 127.0.0.1:51021
+1706009374625	geckodriver	INFO	Listening on 127.0.0.1:35269
