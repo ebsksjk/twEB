@@ -6,6 +6,7 @@ import time, os
 from bs4 import BeautifulSoup
 import urllib.request
 import pickle
+import secret
 
  
 class Twitterbot:

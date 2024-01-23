@@ -1,5 +1,4 @@
 from tools import *
-import secret, os
 import pickle
 
 bot = initbot()
