@@ -1,21 +1,16 @@
-import tools as tb
+from tools import *
 import secret, os
 import pickle
 
-bot = tb.Twitterbot()
+bot = initbot()
+meldungen = initsoup("https://www.erfurter-bahn.de/")
 
-if(os.path.isfile('cookies.pkl')):
-    bot.bot.get("https://twitter.com")
-    cookies = pickle.load(open("cookies.pkl", "rb"))
-    for cookie in cookies:
-        bot.bot.add_cookie(cookie)
-else:
-    credentials = secret.get_credentials()
-    bot.logon(credentials['email'], credentials['password'])
-    pickle.dump(bot.bot.get_cookies(), open("cookies.pkl", "wb"))
+for i in meldungen:
+    print(len(tweetify(i.text)))
+    print(tweetify(i.text))
+    print()
 
-bot.send_tweet()
+    bot.send_tweet(tweetify(i.text))
 
 pickle.dump(bot.bot.get_cookies(), open("cookies.pkl", "wb"))
 bot.touch_grass()
-
