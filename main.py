@@ -1,21 +1,21 @@
-from selenium import webdriver 
-  
-# Create a FirefoxOptions object 
-options = webdriver.FirefoxOptions() 
-  
-# Set the Firefox browser to run in headless mode 
-options.headless = True
-  
-# Create a WebDriver instance with the specified options 
-driver = webdriver.Firefox(options=options) 
-  
-# Navigate to a website 
-driver.get("http://dr-navigator.de") 
-  
-# Perform some automation tasks 
-title = driver.title 
-print("Title of the webpage:", title) 
-  
-# Close the WebDriver when done 
-driver.quit() 
+import tools as tb
+import secret, os
+import pickle
+
+bot = tb.Twitterbot()
+
+if(os.path.isfile('cookies.pkl')):
+    bot.bot.get("https://twitter.com")
+    cookies = pickle.load(open("cookies.pkl", "rb"))
+    for cookie in cookies:
+        bot.bot.add_cookie(cookie)
+else:
+    credentials = secret.get_credentials()
+    bot.logon(credentials['email'], credentials['password'])
+    pickle.dump(bot.bot.get_cookies(), open("cookies.pkl", "wb"))
+
+bot.send_tweet()
+
+pickle.dump(bot.bot.get_cookies(), open("cookies.pkl", "wb"))
+bot.touch_grass()
 
