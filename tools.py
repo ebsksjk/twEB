@@ -2,6 +2,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import ActionChains
+from selenium.webdriver.chrome.options import Options
 import time, os
 from bs4 import BeautifulSoup
 import urllib.request
@@ -12,10 +13,18 @@ import secret
 class Twitterbot:
  
     def __init__(self):
-        options = webdriver.FirefoxOptions() 
-        options.headless = True
-        self.bot = webdriver.Firefox(options=options) 
- 
+        #options = webdriver.FirefoxOptions() 
+        #options.headless = True
+        #self.bot = webdriver.Firefox(options=options) 
+        chrome_options = Options()
+        # chrome_options.add_argument("--disable-extensions")
+        # chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--no-sandbox") # linux only
+        chrome_options.add_argument("--headless=new") # for Chrome >= 109
+        # chrome_options.add_argument("--headless")
+        # chrome_options.headless = True # also works
+        self.bot = webdriver.Chrome(options=chrome_options)
+        
     def logon(self, email, password):
         bot = self.bot
 
@@ -113,7 +122,11 @@ def tweetify(text):
         "ihre Mitglieder ": '',
         "Dennoch kann es ": 'Es kann ',
         "Wir bitten um Ihr Verständnis.": "Wir bitten um Verständnis.",
-        "vereinzelten ": ''
+        "vereinzelten ": '',
+        " Weida ": " #Weida ",
+        " Münnerstadt ": " #Münnerstadt ",
+        " Ebenhausen " : " #Ebenhausen ",
+        "Ihre Süd Thüringen Bahn" : ""
         }
 
     returner = text
